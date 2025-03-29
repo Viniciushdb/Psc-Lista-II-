@@ -3,16 +3,17 @@ import java.util.Scanner;
 public class Atividade01 {
 
     public static void main(String[] args) {
-        
         Scanner sc = new Scanner(System.in);
-        int num1;
-
-        System.out.println("Digite um número: ");
-        num1 = sc.nextInt();
-
-        System.out.println("Seu número é: " + num1);
-
-        sc.close();
+        int numero;
+        
+        try {
+            System.out.print("Digite um número: ");
+            numero = sc.nextInt();
+            System.out.printf("O número digitado foi: %d%n", numero);
+        } catch (Exception e) {
+            System.out.println("Erro: Digite apenas números inteiros!");
+        } finally {
+            sc.close();
+        }
     }
-
-}
+} 
